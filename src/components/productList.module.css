@@ -1,0 +1,23 @@
+.shopContainer {
+    /* text-align: center; */
+    /* max-width: 1000px; */
+    /* justify-content: center; */
+    /* margin: auto; */
+}
+
+.shoppingName {
+    text-align: center;
+    /* display: flex; */
+}
+
+.shopDiv {
+    display: flex;
+    text-align: center;
+    justify-content: center;    
+}
+
+/* .productField {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+} */
