@@ -12,7 +12,7 @@ const products = [
 ];
 
 const ProductList = () => {
-    const dispatch = useDispatch();
+    const sendAction = useDispatch();
 
   return (
     <div className={style.shopContainer}>
@@ -24,13 +24,13 @@ const ProductList = () => {
                 <div className={style.shopDiv}>
                     {/* MAPPING */}
                     {products.map((product) => 
-                        <div className={style.productField}>
+                        <div key={product.id} className={style.productField}>
                         <div className={style.productCard}>
                             <div className={style.ItemBox}>
                                 <h2 className={style.productName}>{product.name}</h2>
                                 <p className={style.productPrice}>${product.price}</p>
 
-                                <button className={style.add} onClick={() => dispatch(addItem(product))}>                                
+                                <button className={style.add} onClick={() => sendAction(addItem(product))}>                                
                                     Add to Cart
                                 </button>
                             </div>
@@ -43,7 +43,7 @@ const ProductList = () => {
   )
 }
 
-export default ProductList
+export default ProductList;
 
 // import React from "react";
 // import { useDispatch } from "react-redux";
